@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "endstone-dimension-lock"
+version = "0.1.0"
+description = "Control player access to the Nether and End on Endstone servers"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = ["typing_extensions>=4.0"]
+keywords = ["endstone", "plugin", "minecraft", "bedrock", "dimension"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.optional-dependencies]
+dev = ["endstone", "ruff"]
+
+[project.entry-points."endstone"]
+dimension-lock = "endstone_dimension_lock:DimensionLockPlugin"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/endstone_dimension_lock"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["I", "E", "F"]

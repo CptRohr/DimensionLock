@@ -1,0 +1,4 @@
+nether_locked = false
+end_locked = false
+log_denied_attempts = true
+deny_message = "§cTravel to the {dimension} is currently disabled."
