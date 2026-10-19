@@ -73,13 +73,6 @@ uv build
 
 The wheel is written to `dist/`. Unit tests use test doubles; they do not substitute for a live Endstone/BDS test.
 
-## Verification status
-
-- Endstone 0.11.13 Python API package: used for local lint/type inspection, unit tests, and wheel build.
-- Endstone/BDS runtime: not tested.
-- UTP integration: not tested live. UTP source was inspected to identify its direct teleport paths.
-- Endstone 0.11.12: expected to be compatible, but not separately validated.
-
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE).
